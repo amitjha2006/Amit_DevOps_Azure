@@ -1,1 +1,15 @@
-Please assist me in writing a small code for GitHub. Thank you.
+header = {
+    'Accept': 'text/plain',
+    'Content-Type': 'application/json'
+}
+
+request_payload = {
+    "id": 253,
+    "title": "Amit API testing 250",
+    "dueDate": "2023-08-17T09:42:31.349Z",
+    "completed": True
+}
+
+response = requests.post("https://fakerestapi.azurewebsites.net/api/v1/Activities", headers=header, json=request_payload)
+print(response.status_code)
+print(response.json())
