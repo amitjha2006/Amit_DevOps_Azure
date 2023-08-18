@@ -1,0 +1,31 @@
+print('Hello from constructor')
+
+#  constructor is a class function with a double underscore
+#  __int__() func gets called whenever an object is created
+#  We can use it to initialize all variables at the time of object creation
+
+class Employee:
+  def printEmpDetails(self, name, id):
+    print ('Emp Name:', name)
+    print('Emp ID:', id)
+
+emp1 = Employee()
+
+emp1.printEmpDetails('Amit', 123)
+
+class Employee1:
+
+  def __init__(self, name, id):
+    self.name = name
+    self.id = id
+  
+  def printEmpDetails(self):
+    print ('Emp Name:', self.name)
+    print('Emp ID:', self.id)
+
+emp1 = Employee1('Amit', 2313)
+emp2 = Employee1('Nill', 7623)
+
+# emp1.printEmpDetails('Amit', 123)
+emp1.printEmpDetails()
+emp2.printEmpDetails()
